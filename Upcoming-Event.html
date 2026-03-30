@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Upcoming Event</title>
+
+     <style>
+          /* --- Global Reset & Variables --- */
+:root {
+    --electric-blue: #007BFF;
+    --matte-black: #0D0D0D;
+    --deep-charcoal: #161616;
+    --off-white: #E8E8E8;
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body {
+    background-color: var(--matte-black);
+    color: var(--off-white);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Main Container --- */
+#container {
+    background: var(--deep-charcoal);
+    max-width: 600px;
+    width: 100%;
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Event Heading --- */
+#eventName {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--electric-blue);
+    margin-bottom: 15px;
+}
+
+#eventName span {
+    color: var(--off-white);
+    font-size: 2.2rem;
+    display: block; /* Moves the name to a new line */
+    margin-top: 5px;
+}
+
+#eventdes {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.7;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Metadata (Date, Time, Type) --- */
+#eventDate, #eventTime, #eventType {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--electric-blue);
+    margin: 10px 0;
+}
+
+#eventDate span, #eventTime span, #eventType span {
+    color: var(--off-white);
+    font-weight: 400;
+    margin-left: 10px;
+    font-family: 'Courier New', monospace; /* Monospace for technical data */
+}
+
+/* --- Zoom Link Container (The "Secure" Box) --- */
+#eventLinkContainer {
+    background: rgba(0, 123, 255, 0.05);
+    border: 1px dashed var(--electric-blue);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+#eventLinkContainer p {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    margin: 12px 0;
+    color: var(--off-white);
+}
+
+#eventLinkContainer a {
+    color: var(--electric-blue);
+    word-break: break-all; /* Prevents long links from breaking the layout */
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+#eventLinkContainer a:hover {
+    text-shadow: 0 0 10px var(--electric-blue);
+    color: #fff;
+}
+     </style>
+</head>
+<body>
+     <div id="container">
+          <p id="eventName">Event Name: <span>Online Workshop</span></p>
+          <p id="eventdes">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure molestias, nihil vel maxime accusamus 
+               culpa velit quia dolores facere alias cupiditate corporis! Amet earum quod officiis ipsa veritatis, accusamus nihil!</p>
+          <p id="eventDate">Date: <span>11/11/2026</span></p>
+          <p id="eventTime">Time: <span>9pm</span></p>
+          <p id="eventType">Type: <span>Online</span></p>
+
+          <div id="eventLinkContainer">
+               <p>zoom: <a href="https://us06web.zoom.us/j/83882916921?pwd=cY7Wxu33997bY3PdZfa2XCf26Lkq3O.1">https://us06web.zoom.us/j/83882916921?pwd=cY7Wxu33997bY3PdZfa2XCf26Lkq3O.1</a></p>
+               <p>Meeting ID: 1111111</p>
+               <p>Password: 2222bb</p>
+          </div>
+     </div>
+</body>
+</html>
